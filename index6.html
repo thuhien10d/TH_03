@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="vi">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ảnh với Mô tả</title>
+    <style>
+        body {
+            margin: 0;
+            padding: 0;
+            background-color: #f0f0f0;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            font-family: Arial, sans-serif;
+        }
+        
+        .image-box {
+            text-align: center;
+            background-color: #03f0f0;
+            padding: 1rem;
+            border-radius: 12px;
+            box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+            max-width: 500px;
+        }
+        
+        .image-box img {
+            max-width: 100%;
+            height: auto;
+            border-radius: 8px;
+            box-shadow: 0 4px 12px rgba(0, 0, 0, 0.3);
+        }
+        
+        .image-box figcaption {
+            margin-top: 1rem;
+            font-size: 1rem;
+            color: #444;
+        }
+    </style>
+</head>
+
+<body>
+    <figure class="image-box">
+        <img src="https://picsum.photos/200/300" alt="Ảnh cá nhân">
+        <figcaption>Đây là mô tả cho ảnh</figcaption>
+    </figure>
+</body>
+
+</html>
