@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="vi">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Form Gửi Phản Hồi</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            background: #f4f4f4;
+            margin: 0;
+        }
+        
+        .feedback-form {
+            background: white;
+            padding: 20px;
+            border-radius: 8px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            width: 300px;
+            text-align: center;
+        }
+        
+        .stars {
+            display: flex;
+            justify-content: center;
+            margin-bottom: 15px;
+        }
+        
+        .stars label {
+            font-size: 2rem;
+            color: #ddd;
+            cursor: pointer;
+        }
+        
+        .stars input[type="radio"] {
+            display: none;
+        }
+        
+        .stars input[type="radio"]:checked~label,
+        .stars input[type="radio"]:hover~label {
+            color: #FFD700;
+        }
+        
+        input[type="email"],
+        textarea {
+            width: 100%;
+            padding: 10px;
+            margin: 10px 0;
+            border-radius: 4px;
+            border: 1px solid #ccc;
+            box-sizing: border-box;
+        }
+        
+        textarea {
+            height: 100px;
+        }
+        
+        .submit-btn {
+            background: #007bff;
+            color: white;
+            border: none;
+            padding: 10px 20px;
+            border-radius: 4px;
+            cursor: pointer;
+            width: 100%;
+        }
+        
+        .submit-btn:hover {
+            background: #0056b3;
+        }
+    </style>
+</head>
+
+<body>
+
+    <div class="feedback-form">
+        <h2>Gửi Phản Hồi</h2>
+        <form action="mailto:your-email@example.com" method="post" enctype="text/plain">
+            <div class="stars">
+                <input type="radio" id="star5" name="rating" value="5"><label for="star5">★</label>
+                <input type="radio" id="star4" name="rating" value="4"><label for="star4">★</label>
+                <input type="radio" id="star3" name="rating" value="3"><label for="star3">★</label>
+                <input type="radio" id="star2" name="rating" value="2"><label for="star2">★</label>
+                <input type="radio" id="star1" name="rating" value="1"><label for="star1">★</label>
+            </div>
+            <input type="email" name="email" placeholder="Email" required>
+            <textarea name="feedback" placeholder="Phản hồi..." required></textarea>
+            <button type="submit" class="submit-btn">Gửi Phản Hồi</button>
+        </form>
+    </div>
+
+</body>
+
+</html>
