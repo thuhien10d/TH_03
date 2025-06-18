@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="vi">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Form Đăng Nhập</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f2f2f2;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+        }
+        
+        .login-form {
+            background: #fff;
+            padding: 40px;
+            border-radius: 10px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            width: 100%;
+            max-width: 400px;
+        }
+        
+        h2 {
+            text-align: center;
+            margin-bottom: 20px;
+            font-size: 1.8rem;
+            color: #333;
+        }
+        /* Các input có viền và shadow */
+        
+        input {
+            width: 100%;
+            padding: 12px;
+            margin: 10px 0;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+            font-size: 1rem;
+            transition: all 0.3s ease;
+        }
+        /* Viền và shadow khi focus */
+        
+        input:focus {
+            outline: none;
+            border-color: #0f7ee6;
+            box-shadow: 0 0 8px rgba(81, 107, 131, 0.5);
+            /* Viền sáng và shadow */
+        }
+        
+        button {
+            width: 100%;
+            padding: 12px;
+            background-color: #5b9bd5;
+            border: none;
+            border-radius: 5px;
+            color: #fff;
+            font-size: 1.1rem;
+            cursor: pointer;
+            transition: background-color 0.3s;
+        }
+        /* Nút button khi hover */
+        
+        button:hover {
+            background-color: #4a8bc2;
+        }
+    </style>
+</head>
+
+<body>
+
+    <div class="login-form">
+        <h2>Đăng Nhập</h2>
+        <form>
+            <input type="text" id="username" placeholder="Username" required>
+            <input type="password" id="password" placeholder="Password" required>
+            <button type="submit">Đăng Nhập</button>
+        </form>
+    </div>
+
+</body>
+
+</html>
