@@ -1,0 +1,155 @@
+<!DOCTYPE html>
+<html lang="vi">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Form Khảo Sát Ý Kiến</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f9f9f9;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            color: #333;
+        }
+        
+        .survey-form {
+            background: #fff;
+            padding: 30px;
+            border-radius: 10px;
+            box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+            width: 100%;
+            max-width: 600px;
+        }
+        
+        h2 {
+            text-align: center;
+            margin-bottom: 20px;
+            color: #444;
+            font-size: 2rem;
+        }
+        /* Các label và input căn trái hợp lý */
+        
+        label {
+            display: block;
+            margin-bottom: 10px;
+            font-size: 1.1rem;
+            color: #444;
+        }
+        
+        .form-group {
+            margin-bottom: 20px;
+        }
+        
+        input[type="radio"],
+        input[type="checkbox"] {
+            margin-right: 10px;
+            width: 20px;
+            height: 20px;
+            vertical-align: middle;
+            accent-color: #5b9bd5;
+            /* Màu sắc của radio và checkbox */
+        }
+        
+        input[type="radio"]:checked,
+        input[type="checkbox"]:checked {
+            background-color: #5b9bd5;
+            /* Màu khi chọn */
+        }
+        
+        textarea {
+            width: 100%;
+            padding: 12px;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+            font-size: 1rem;
+            resize: vertical;
+            margin-bottom: 15px;
+            transition: all 0.3s ease;
+        }
+        
+        textarea:focus {
+            outline: none;
+            border-color: #5b9bd5;
+            box-shadow: 0 0 8px rgba(91, 155, 213, 0.5);
+            /* Shadow khi focus vào textarea */
+        }
+        
+        input[type="submit"] {
+            background-color: #5b9bd5;
+            border: none;
+            border-radius: 5px;
+            color: #fff;
+            padding: 12px 20px;
+            cursor: pointer;
+            font-size: 1.1rem;
+            width: 100%;
+            transition: background-color 0.3s;
+        }
+        
+        input[type="submit"]:hover {
+            background-color: #4a8bc2;
+        }
+        /* Cải thiện khoảng cách giữa các phần tử */
+        
+        .form-group label {
+            font-weight: bold;
+        }
+        
+        .form-group input[type="radio"],
+        .form-group input[type="checkbox"] {
+            margin-top: 5px;
+        }
+    </style>
+</head>
+
+<body>
+
+    <div class="survey-form">
+        <h2>Khảo Sát Ý Kiến</h2>
+        <form action="">
+
+            <!-- Nhóm radio button -->
+            <div class="form-group">
+                <label for="question1">Bạn hài lòng với dịch vụ?</label>
+                <input type="radio" id="yes" name="satisfaction" value="yes">
+                <label for="yes">Có</label>
+                <input type="radio" id="no" name="satisfaction" value="no">
+                <label for="no">Không</label>
+            </div>
+
+            <!-- Nhóm checkbox -->
+            <div class="form-group">
+                <label for="question2">Những dịch vụ bạn đã sử dụng?</label>
+                <input type="checkbox" id="service1" name="services" value="web">
+                <label for="service1">Thiết kế website</label>
+                <input type="checkbox" id="service2" name="services" value="seo">
+                <label for="service2">SEO</label>
+                <input type="checkbox" id="service3" name="services" value="marketing">
+                <label for="service3">Marketing trực tuyến</label>
+            </div>
+
+            <!-- Textarea -->
+            <div class="form-group">
+                <label for="comments">Ý kiến đóng góp của bạn:</label>
+                <textarea id="comments" name="comments" rows="4" placeholder="Nhập ý kiến của bạn ở đây..."></textarea>
+            </div>
+
+            <!-- Nút gửi -->
+            <input type="submit" value="Gửi Khảo Sát">
+
+        </form>
+    </div>
+
+</body>
+
+</html>
