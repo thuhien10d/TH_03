@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="vi">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Thư viện ảnh</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f0f0f0;
+            padding: 20px;
+        }
+        
+        .gallery {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 15px;
+            justify-content: center;
+        }
+        
+        .gallery img {
+            width: 200px;
+            height: 150px;
+            object-fit: cover;
+            border-radius: 8px;
+            box-shadow: 0 2px 6px rgba(0, 0, 0, 0.2);
+            transition: transform 0.3s ease;
+        }
+        
+        .gallery img:hover {
+            transform: scale(1.05);
+        }
+    </style>
+</head>
+
+<body>
+
+    <h2> Thư viện ảnh</h2>
+    <div class="gallery">
+        <img src="https://picsum.photos/200/150?random=1" alt="Ảnh 1">
+        <img src="https://picsum.photos/200/150?random=2" alt="Ảnh 2">
+        <img src="https://picsum.photos/200/150?random=3" alt="Ảnh 3">
+        <img src="https://picsum.photos/200/150?random=4" alt="Ảnh 4">
+        <img src="https://picsum.photos/200/150?random=5" alt="Ảnh 5">
+        <img src="https://picsum.photos/200/150?random=6" alt="Ảnh 6">
+    </div>
+
+</body>
+
+</html>
