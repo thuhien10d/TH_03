@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="vi">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Chèn Audio MP3</title>
+    <style>
+        /* Căn giữa toàn bộ nội dung */
+        
+        body {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            margin: 0;
+            font-family: Arial, sans-serif;
+            background-color: #f0f0f0;
+        }
+        /* Khung chứa audio */
+        
+        .audio-container {
+            text-align: center;
+            padding: 20px;
+            border: 2px solid #77e4db;
+            border-radius: 8px;
+            background-color: #fff;
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+        }
+        /* Tiêu đề */
+        
+        .audio-container h1 {
+            margin-bottom: 15px;
+            font-size: 24px;
+            color: #333;
+        }
+        /* Căn giữa và thêm chiều rộng cho audio */
+        
+        audio {
+            width: 100%;
+            max-width: 500px;
+            outline: none;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="audio-container">
+        <h1>Nghe Audio MP3</h1>
+        <audio controls>
+            <source src="path_to_your_audio_file.mp3" type="audio/mp3">
+            Trình duyệt của bạn không hỗ trợ thẻ audio.
+        </audio>
+    </div>
+</body>
+
+</html>
