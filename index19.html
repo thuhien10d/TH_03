@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+    <meta charset="UTF-8">
+    <title>Lịch Sự Kiện</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f0f0f0;
+            padding: 20px;
+        }
+
+        h1 {
+            text-align: center;
+            color: #333;
+        }
+
+        .event-list {
+            max-width: 600px;
+            margin: 0 auto;
+            display: flex;
+            flex-direction: column;
+            gap: 15px;
+        }
+
+        .event {
+            padding: 15px;
+            border-radius: 10px;
+            color: white;
+            box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
+            transition: transform 0.2s;
+        }
+
+        .event:hover {
+            transform: scale(1.02);
+        }
+
+        /* Màu theo từng ngày */
+        .event:nth-child(1) { background-color: #4caf50; }
+        .event:nth-child(2) { background-color: #2196f3; }
+        .event:nth-child(3) { background-color: #ff9800; }
+        .event:nth-child(4) { background-color: #9c27b0; }
+
+        /* Sự kiện gần nhất */
+        .highlight {
+            border: 3px solid #e91e63;
+            box-shadow: 0 0 10px rgba(233, 30, 99, 0.6);
+        }
+
+        .event-date {
+            font-weight: bold;
+            font-size: 16px;
+        }
+
+        .event-title {
+            font-size: 18px;
+        }
+    </style>
+</head>
+<body>
+
+    <h1>Lịch Sự Kiện</h1>
+
+    <div class="event-list">
+        <div class="event" data-date="2025-06-22">
+            <div class="event-date">22/06/2025</div>
+            <div class="event-title">Workshop thiết kế đồ họa</div>
+        </div>
+        <div class="event" data-date="2025-06-23">
+            <div class="event-date">23/06/2025</div>
+            <div class="event-title">Giao lưu CLB nhiếp ảnh</div>
+        </div>
+        <div class="event" data-date="2025-06-24">
+            <div class="event-date">24/06/2025</div>
+            <div class="event-title">Triển lãm sản phẩm sinh viên</div>
+        </div>
+        <div class="event" data-date="2025-06-25">
+            <div class="event-date">25/06/2025</div>
+            <div class="event-title">Hội thảo nghề nghiệp</div>
+        </div>
+    </div>
+
+    <script>
+        function highlightNearestEvent() {
+            const events = document.querySelectorAll('.event');
+            const today = new Date();
+            let closestEvent = null;
+            let minDiff = Infinity;
+
+            events.forEach(event => {
+                const dateStr = event.getAttribute('data-date');
+                const eventDate = new Date(dateStr);
+                const diff = eventDate - today;
+
+                if (diff >= 0 && diff < minDiff) {
+                    minDiff = diff;
+                    closestEvent = event;
+                }
+            });
+
+            if (closestEvent) {
+                closestEvent.classList.add('highlight');
+            }
+        }
+
+        highlightNearestEvent();
+    </script>
+
+</body>
+</html>
